@@ -6,6 +6,9 @@ orders = [
 
 order_ids = [order["order_id"] for order in orders]
 
+# Test for empty orders dataset
+assert len(orders) > 0, "Orders dataset is empty!"
+
 # Test for duplicate order IDs
 assert len(order_ids) == len(set(order_ids)), "Duplicate IDs found!"
 
